@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="align-items-center">
+        <form action="" method="post">
+            {% csrf_token %}
+
+            {{ form }}
+
+            {% if error_text %}
+            <p style="color: red">{{ error_text }}</p>
+            {% endif %}
+            <input type="submit" value="登入" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

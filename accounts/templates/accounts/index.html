@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<p>Hello {{ user }}</p>
+<a href="{% url 'accounts:punch' 0 %}"><button class="btn btn-primary">上班打卡</button></a>
+<a href="{% url 'accounts:punch' 1 %}"><button class="btn btn-primary">下班打卡</button></a>
+<a href="{% url 'accounts:logout' %}"><button class="btn btn-primary">登出</button></a>
+
+{% endblock %}
